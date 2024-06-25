@@ -1,6 +1,6 @@
 "use client";
-import { FaMoon } from "react-icons/fa";
-import { BsSunFill } from "react-icons/bs";
+
+import { BsCloudMoon, BsCloudSun } from "react-icons/bs";
 import { useThemeToggle } from "../hooks/hooks";
 
 const ThemeToggle = () => {
@@ -8,19 +8,13 @@ const ThemeToggle = () => {
 
   return (
     <div className="flex items-center space-x-2 cursor-pointer ">
-      {darkMode ? (
-        <BsSunFill
-          className="text-yellow-400"
-          size={16}
-          onClick={() => setDarkMode(false)}
-        />
-      ) : (
-        <FaMoon
-          className="text-dark"
-          size={16}
-          onClick={() => setDarkMode(true)}
-        />
-      )}
+      <div className="bg-light-background dark:bg-dark-background dark:text-dark-text-primary text-light-text-primary p-2 rounded-lg">
+        {darkMode ? (
+          <BsCloudSun size={16} onClick={() => setDarkMode(false)} />
+        ) : (
+          <BsCloudMoon size={16} onClick={() => setDarkMode(true)} />
+        )}
+      </div>
     </div>
   );
 };

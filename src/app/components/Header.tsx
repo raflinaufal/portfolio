@@ -8,10 +8,10 @@ const Header: React.FC<{ isOpen: boolean; toggleSidebar: () => void }> = ({
   toggleSidebar,
 }) => {
   return (
-    <header className="flex justify-between items-center p-4 dark:bg-gray-900 dark:text-white shadow-lg sm:hidden fixed w-full">
+    <header className="flex justify-between items-center p-4 dark:bg-dark-background dark:text-white shadow-lg sm:hidden fixed w-full bg-light-background text-light-text-primary">
       <div className="flex items-center space-x-4">
         <img
-          src="/path-to-your-profile-picture.jpg"
+          src="/profile.jpg"
           alt="Profile"
           className="w-8 h-8 rounded-full"
         />

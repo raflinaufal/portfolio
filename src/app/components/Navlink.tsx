@@ -10,13 +10,13 @@ const NavLink = () => {
     <>
       {navLink.map((item, idx) => (
         <div key={idx} className="cursor-pointer group">
-          <div className="">
+          <div className="py-1">
             <Link
               href={item.link}
-              className={`flex items-center py-3 px-3 rounded-xl transition-colors text-gray-800 dark:text-white/80 ${
+              className={`flex items-center p-2 rounded-xl ${
                 activeLink === item.label
-                  ? "bg-gray-200  dark:bg-gray-700 dark:text-white "
-                  : ""
+                  ? "dark:bg-gray-700 bg-gray-200 text-black  dark:text-white"
+                  : "hover:bg-gray-200 dark:hover:bg-gray-700"
               }`}
               onClick={() => {
                 activeLink !== item.label
@@ -24,7 +24,13 @@ const NavLink = () => {
                   : setActiveLink("");
               }}
             >
-              <item.icon className="w-5 h-5 mr-2 text-gray-700 dark:text-white/80" />
+              <item.icon
+                className={`w-5 h-5 mr-2 ${
+                  activeLink === item.label
+                    ? "dark:text-white text-black"
+                    : ""
+                }`}
+              />
               <span>{item.label}</span>
             </Link>
           </div>

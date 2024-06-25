@@ -10,18 +10,31 @@ const config: Config = {
   ],
   darkMode: "class",
   theme: {
-    screens: {
-      sm: "640px",
-      md: "768px",
-      lg: "1024px",
-      xl: "1280px",
-      "2xl": "1536px",
-    },
+    // screens: {
+    //   sm: "640px",
+    //   md: "768px",
+    //   lg: "1024px",
+    //   xl: "1280px",
+    //   "2xl": "1536px",
+    // },
     extend: {
       colors: {
-        dark: "#1F2937",
-        medium: "#232745",
-        blue: "#4A8FDE",
+        dark: {
+          background: "#121212",
+          primary: "#1E88E5",
+          secondary: "#BB86FC",
+          accent: "#03DAC6",
+          "text-primary": "#FFFFFF",
+          "text-secondary": "#B0BEC5",
+        },
+        light: {
+          background: "#FFFFFF",
+          primary: "#1E88E5",
+          secondary: "#6200EA",
+          accent: "#03DAC6",
+          "text-primary": "#000000",
+          "text-secondary": "#757575",
+        },
       },
     },
   },
