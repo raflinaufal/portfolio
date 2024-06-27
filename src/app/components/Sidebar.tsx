@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import NavLink from "./Navlink";
-import { FaGithub, FaHeart, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import ThemeToggle from "./ThemeToggle";
 import { MdVerified as VerifiedIcon } from "react-icons/md";
 import Tooltip from "./element/Tooltip";
@@ -16,9 +16,9 @@ const Sidebar: React.FC<{ isOpen: boolean }> = ({ isOpen }) => {
       <div className="sm:block hidden">
         <div className="relative flex h-32 w-full justify-center rounded-xl bg-cover">
           <div className="absolute flex h-32 w-full justify-center rounded-xl bg-gradient-to-r from-gray-400 via-gray-200 to-gray-50 dark:bg-gradient-to-r dark:from-gray-800 dark:via-gray-700 dark:to-gray-600"></div>
-          <div className="absolute -bottom-12 flex h-[87px] w-[87px] items-center justify-center rounded-xl   dark:border-slate-500">
+          <div className="absolute -bottom-12 flex h-[87px] w-[87px] items-center justify-center rounded-xl dark:border-slate-500">
             <img
-              className="h-full w-full rounded-lg object-contain"
+              className="h-full w-full border-2 shadow-lg rounded-lg object-contain dark:border-light-text-secondary"
               src="/profile.jpg"
               alt=""
             />
@@ -50,16 +50,15 @@ const Sidebar: React.FC<{ isOpen: boolean }> = ({ isOpen }) => {
           <FaInstagram />
         </div>
       </div>
-      <div className="border-b w-full sm:block hidden" />
+      <div className="border-b-2 w-full sm:block hidden dark:border-b-light-text-secondary" />
       <nav className="py-5">
         <NavLink />
       </nav>
-      <div className="border-b w-full sm:block hidden" />
-      <footer className="pt-10 border-t w-full sm:block hidden ">
+      <div className="border-b-2 w-full sm:block hidden dark:border-b-light-text-secondary" />
+      <footer className="pt-5  w-full sm:block hidden ">
         <div className="flex items-center">
-          <p className="text-sm  dark:text-dark-text-primary text-light-text-primary flex items-center ">
-            © {new Date().getFullYear()} Rafli
-            <FaHeart className="ml-1 text-red-500" />. All Rights Reserved
+          <p className="text-sm text-center  dark:text-dark-text-primary text-light-text-primary flex items-center ">
+            © {new Date().getFullYear()} Rafli Naufal.All Rights Reserved
           </p>
         </div>
       </footer>

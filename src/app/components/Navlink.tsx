@@ -26,9 +26,7 @@ const NavLink = () => {
             >
               <item.icon
                 className={`w-5 h-5 mr-2 ${
-                  activeLink === item.label
-                    ? "dark:text-white text-black"
-                    : ""
+                  activeLink === item.label ? "dark:text-white text-black" : ""
                 }`}
               />
               <span>{item.label}</span>

@@ -16,26 +16,33 @@ const Carrer: React.FC = () => {
   return (
     <div>
       <div className="mt-5 flex items-center space-x-2">
-        <FaBriefcase className="text-3xl" />
-        <h1 className="text-2xl">Career</h1>
+        <FaBriefcase className="text-xl" />
+        <h1 className="sm:text-2xl text-xl font-bold mb-1">Experience</h1>
       </div>
-      <p className="mt-2 text-gray-400">My professional career journey</p>
+      <p className="text-lg mb-3 dark:text-dark-text-secondary text-light-text-secondary font-medium italic">
+        My work experience
+      </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 mt-5">
         {careers.map((career, index) => (
           <div
             key={index}
-            className=" transition-all duration-300 lg:hover:shadow-md flex h-max min-w-[350px] cursor-pointer items-center gap-5 overflow-hidden  bg-gradient-to-r from-white via-white to-white dark:bg-gradient-to-r dark:from-gray-800 dark:via-gray-700 dark:to-gray-600 rounded-xl p-2 shadow-lg dark:shadow-gray-900 py-2 hover:scale-95"
+            className="rounded-xl transition-all duration-300 lg:hover:shadow-md flex h-max min-w-[350px] cursor-pointer items-center gap-5 overflow-hidden rounded-r-xl border border-neutral-300 py-2 hover:scale-95 dark:border-neutral-600 dark:bg-gradient-to-br dark:from-neutral-900 dark:to-neutral-950 dark:shadow-white/20 shadow-md"
           >
             <img
               src={career.imgSrc}
-              alt={`${career.companyName} Logo`}
-              className="w-16 h-16  object-contain  ml-2 "
+              alt={`${career.companyName} logo`}
+              className="w-16 h-16 object-contain ml-2 dark:bg-light-background dark:shadow-white/20 rounded-lg"
             />
             <div>
               <h2 className="text-lg font-medium">{career.jobTitle}</h2>
-              <p className="text-sm text-gray-400">{career.companyName}</p>
-              <p className="text-sm text-gray-400">{career.location}</p>
-              <p className="mt-2 text-gray-400">{career.duration}</p>
+              <div className="flex text-sm dark:text-dark-text-secondary text-light-text-secondary space-x-2 mt-1">
+                <p>{career.companyName}</p>
+                <span>-</span>
+                <p>{career.location}</p>
+              </div>
+              <p className="mt-1 dark:text-dark-text-secondary text-light-text-secondary">
+                {career.duration}
+              </p>
               <p className="text-sm text-gray-600">{career.timePeriod}</p>
             </div>
           </div>
